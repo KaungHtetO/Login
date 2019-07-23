@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "_Login";
+}
+
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li><form asp-controller="Lists" asp-action="show">
+                <p>
+                    Title: <input type="text" name="SearchString"><br />
+
+                    <input type="submit" value="Search Tasks" class="center-block"/>
+                </p>
+            </form>
+
+            <li>
+                <a href="#"><i class="fa fa-info fa-fw"></i> Do To List<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("View Details", "Index", "Users")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Add New Tasks", "Create", "Users")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Finished Jobs", "Finished", "Users")
+                    </li>
+                    <li>
+                        @Html.ActionLink("UnFinished Jobs", "UnFinished", "Users")
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+
+
+        </ul>  <!-- /.sidebar-collapse -->
+    </div>
+</div>

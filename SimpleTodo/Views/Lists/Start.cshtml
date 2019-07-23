@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Start";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Lists" asp-action="show">
+    <p>
+        Title: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<div class="container">
+    <div class="row" style="margin-top:40px;font-size:x-large;">
+
+        <div class="col-md-6">
+            <button class="alert-info alert-link  btn-block" style="font-size:x-large;">
+
+                <span class="glyphicon glyphicon-alert"></span><span></span>
+                @Html.ActionLink("View To Do List", "Index", "Lists")
+            </button>
+        </div>
+        <div class="col-md-6">
+            <button class="alert-info alert-link  btn-block" style="font-size:x-large;">
+
+                <span class="glyphicon glyphicon-save-file"></span><span></span>
+                @Html.ActionLink("Add To Do List", "Create", "Lists")
+            </button>
+        </div>
+    </div>
+</div>
+
